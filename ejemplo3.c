@@ -12,13 +12,13 @@ int main()
     // Imprimir el byte como número
     // ----------------------------
     // %d interpreta el byte como número decimal
-    printf("Imprimir byte como si fuese un número: %d\n", byte_1);
+    printf("Imprimir byte_1 como si fuese un número: %d\n", byte_1);
 
     // ----------------------------
     // Imprimir el byte como carácter
     // ----------------------------
     // %c interpreta el byte como un carácter ASCII
-    printf("Imprimir byte como si fuese un carácter: %c\n", byte_1);
+    printf("Imprimir byte_1 como si fuese un carácter: %c\n", byte_1);
 
     return 0; // Fin del programa. Todo salió bien
 }

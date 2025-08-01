@@ -6,29 +6,19 @@ void cambiar(int a, int b);
 
 int main(void)
 {
-    int a = 10;
-    int b = 20;
+    int x = 1;
+    int y = 2;
 
-    // Imprimir valores antes de llamar a la función
-    printf("a: %d y b: %d\n", a, b);
-
-    // Pasamos el valor 'a' y 'b' (no sus direcciones)
-    cambiar(a, b);
-
-    // Imprimir valores después: no cambian
-    printf("a: %d y b: %d\n", a, b);
+    printf("%d %d\n", x, y);
+    cambiar(x, y);
+    printf("%d %d\n", x, y);
 
     return 0;
 }
 
-// Intenta cambiar a y b, pero solo modifica copias locales
 void cambiar(int a, int b)
 {
-    printf("Dentro de cambiar() a: %d y b: %d (antes del cambio)\n", a, b);
-
-    int temporal = a;
+    int tmp = a;
     a = b;
-    b = temporal;
-
-    printf("Dentro de cambiar() a: %d y b: %d (después del cambio)\n", a, b);
+    b = tmp;
 }

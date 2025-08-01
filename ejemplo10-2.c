@@ -1,28 +1,25 @@
-// Scope - a y b cambiaran debido al scope
+// Pasar valores por referencia
 #include <stdio.h>
 
-// Prototipo de funcione
-void cambiar();
-
-int a = 10;
-int b = 20;
+// Prototipo de función
+void cambiar(int *a, int *b);
 
 int main(void)
 {
-    printf("a: %d y b: %d\n", a, b);
+    int x = 1;
+    int y = 2;
 
-    cambiar();
+    printf("x: %d, y: %d\n", x, y);
+    cambiar(&x, &y);
+    printf("x: %d, y: %d\n", x, y);
 
-    printf("a: %d y b: %d\n", a, b);
-
-    return 0; // Fin del programa. Todo salió bien
+    return 0;
 }
 
-// Definición de cambiar()
-void cambiar()
+// cambiar() modifica los valores originales usando punteros
+void cambiar(int *a, int *b)
 {
-    int temporal;
-    temporal = a;
-    a = b;
-    b = temporal;
+    int temporal = *a;
+    *a = *b;
+    *b = temporal;
 }

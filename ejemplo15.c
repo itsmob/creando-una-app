@@ -1,22 +1,17 @@
-// Escribir archivos
+// Overflow = Desbordamiento
 #include <stdio.h>
-#include <stdlib.h>
 
 int main(void)
 {
-    FILE *archivo;
+    // Valor máximo de un unsigned char: 255 (8 bits en 1s)
+    unsigned char x = 0b11111111;
 
-    // Escribir en el archivo o crearlo si no existe
-    archivo = fopen("ejemplo15.txt", "w");
-    if (archivo == NULL)
-    {
-        printf("Error al abrir el archivo para escritura.\n");
-        return 1;
-    }
+    printf("%d\n", x); // Imprime 255
 
-    fprintf(archivo, "Hola, estudiante.\nEste es un ejemplo de archivo.\n");
-    fclose(archivo); // Importante cerrar
-    printf("ejemplo15.txt creado exitosamente!.\n");
+    x++; // Desborda: pasa de 255 a 0
+
+    printf("%d\n", x); // Imprime 0
+
 
     return 0;
 }
