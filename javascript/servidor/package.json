@@ -1,0 +1,14 @@
+{
+  "name": "servidor-es-modules",
+  "version": "1.0.0",
+  "description": "Servidor HTTP con ES modules",
+  "type": "module",
+  "main": "servidor.js",
+  "scripts": {
+    "start": "node servidor.js",
+    "dev": "node --watch servidor.js"
+  },
+  "keywords": ["http", "server", "esmodules"],
+  "author": "Tu nombre",
+  "license": "MIT"
+}
